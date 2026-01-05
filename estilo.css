@@ -1,0 +1,241 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    color: #009739;
+    border-bottom: 3px solid #009739;
+}
+
+header img {
+    height: 100px;
+    display: block;
+    margin: 0 ;
+}
+
+.cabecalho-logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 0px;
+    text-align: center;
+}
+
+
+.titulo h1 {
+    color: #009739;
+    font-size: 1.6em;
+    margin: 0;
+    font-weight: bold;
+}
+
+.titulo .subtitulo {
+    font-size: 1em;
+    margin: 3px 0 0 0;
+    color: #444;
+    font-weight: normal; /* sem negrito */
+}
+
+
+/* Navegação */
+nav {
+    background-color: #007a2d;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Estilo padrão das seções */
+.bloco-conteudo {
+    background-color: #f5f5f5;
+    padding: 40px 25px;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: 40px auto;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.bloco-conteudo h2 {
+    text-align: center;
+    color: #009739;
+    margin-bottom: 20px;
+}
+
+.bloco-conteudo p {
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Links e materiais */
+.lista-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-links li {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.lista-links a {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #009739;
+    text-decoration: none;
+    padding: 0px 0px;
+    border-radius: 0px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+
+.lista-links a:hover {
+    background-color: #e6f4ea;
+}
+
+.lista-links .descricao {
+    margin-top: 6px;
+    color: #444;
+    font-size: 0.9em;
+}
+
+/*Calendários */
+.calendarios a {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #009739;
+    text-decoration: none;
+    padding: 0px 0px;
+    border-radius: 0px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+
+
+
+/* Tutor */
+.tutor-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.foto-tutor {
+    width: 200px;
+    height: 240px; 
+    object-fit: cover;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.tutor-info {
+    flex: 1;
+    max-width: 550px;
+    text-align: justify;
+    color: #333;
+}
+
+.tutor-info p:first-child {
+    font-size: 1.2em;
+    color: #009739;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Botões */
+.botao-whatsapp, .botao-email {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    margin-right: 8px;
+    transition: background-color 0.3s;
+    background-color: #009739;
+}
+
+
+.botao-whatsapp:hover {
+    background-color: #007a2d;
+}
+
+.botao-email:hover {
+    background-color: #007a2d;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #555;
+    font-size: 0.9em;
+    border-top: 4px solid #009739;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .cabecalho {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cabecalho img {
+        margin-bottom: 10px;
+    }
+
+    .tutor-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .foto-tutor {
+        margin-bottom: 15px;
+    }
+
+    .tutor-info {
+        text-align: center;
+    }
+
+    .bloco-conteudo {
+        padding: 25px 15px;
+    }
+     /* muda a ordem no mobile */
+    .cabecalho img:first-child {
+        order: 1; /* logo do IFSul vai para o final */
+    }
+
+    .cabecalho img:last-child {
+        order: 2; /* logo da Engenharia vem antes */
+    }
+
+    .titulo {
+        order: 3; /* título no meio */
+    }
+}
